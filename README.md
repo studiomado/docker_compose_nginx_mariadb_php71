@@ -5,9 +5,9 @@ This repository contains a docker-compose file where if you launch It you can cr
 * mariadb 10.1
 * php 7.1
 
-Inside file docker_compose.yml you need to chanhe if you want path and is necessary to have into your project:
+Inside file docker-compose.yml you need to change if you want path and is necessary to have into your project:
 * a file utils/nginx.conf where you have your custom nginx configuration
-* a file called .env where you specifiy database connection parameters like this:
+* a file called .env (you can rename .env.dist from this repo) where you specifiy database connection parameters like this:
 
 ```
 DB_USER=userdb
