@@ -7,7 +7,7 @@ services:
       - 80:80
     volumes:
       - ./utils/nginx.conf:/etc/nginx/conf.d/default.conf
-      - .:/var/www/web
+      - .:/var/www/web:cached
     depends_on:
       - centos_php
   centos_php:
@@ -16,7 +16,7 @@ services:
     ports:
       - 9000:9000
     volumes:
-      - .:/var/www/web
+        - .:/var/www/web:cached
     depends_on:
       - centos_mariadb
   centos_mariadb:
